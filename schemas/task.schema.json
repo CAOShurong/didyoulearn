@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://caoshurong.github.io/didyoulearn/schemas/task.schema.json",
+  "title": "DidYouLearn task pack",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "task_id",
+    "version",
+    "title",
+    "domain",
+    "level",
+    "language",
+    "review_status",
+    "estimated_teaching_minutes",
+    "learning_objectives",
+    "prerequisites",
+    "sources",
+    "misconceptions",
+    "critical_errors",
+    "teaching_brief",
+    "forms"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "task_id": { "$ref": "#/$defs/id" },
+    "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "title": { "type": "string", "minLength": 3 },
+    "domain": { "type": "string", "minLength": 2 },
+    "level": { "type": "string", "minLength": 2 },
+    "language": { "type": "string", "minLength": 2 },
+    "review_status": {
+      "enum": ["community-draft", "reviewed", "expert-reviewed", "synthetic-demo"]
+    },
+    "estimated_teaching_minutes": { "type": "integer", "minimum": 2, "maximum": 60 },
+    "learning_objectives": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 3 }
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["title", "publisher", "url"],
+        "properties": {
+          "title": { "type": "string" },
+          "publisher": { "type": "string" },
+          "url": { "type": "string", "format": "uri", "pattern": "^https://" }
+        }
+      }
+    },
+    "misconceptions": {
+      "$ref": "#/$defs/labeledDescriptions"
+    },
+    "critical_errors": {
+      "$ref": "#/$defs/labeledDescriptions"
+    },
+    "teaching_brief": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["goal", "learner_profile", "instructions", "prohibited_disclosures"],
+      "properties": {
+        "goal": { "type": "string", "minLength": 3 },
+        "learner_profile": { "type": "string", "minLength": 3 },
+        "instructions": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 3 }
+        },
+        "prohibited_disclosures": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 3 }
+        }
+      }
+    },
+    "forms": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["pretest", "posttest", "transfer", "retention"],
+      "properties": {
+        "pretest": { "$ref": "#/$defs/form" },
+        "posttest": { "$ref": "#/$defs/form" },
+        "transfer": { "$ref": "#/$defs/form" },
+        "retention": { "$ref": "#/$defs/form" }
+      }
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]{2,79}$"
+    },
+    "labeledDescriptions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "description"],
+        "properties": {
+          "id": { "$ref": "#/$defs/id" },
+          "description": { "type": "string", "minLength": 3 }
+        }
+      }
+    },
+    "choice": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "text"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "text": { "type": "string", "minLength": 1 }
+      }
+    },
+    "item": {
+      "type": "object",
+      "required": ["id", "type", "prompt", "points"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "type": {
+          "enum": ["single_choice", "multiple_choice", "numeric", "short_text"]
+        },
+        "prompt": { "type": "string", "minLength": 3 },
+        "points": { "type": "number", "exclusiveMinimum": 0 },
+        "choices": {
+          "type": "array",
+          "minItems": 2,
+          "items": { "$ref": "#/$defs/choice" }
+        },
+        "answer": {},
+        "tolerance": { "type": "number", "minimum": 0 },
+        "rubric": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "form": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/item" }
+    }
+  }
+}

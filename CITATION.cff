@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If DidYouLearn supports your research, please cite the software."
+title: "DidYouLearn: Outcome-based evaluation for AI tutors"
+type: software
+authors:
+  - family-names: Cao
+    given-names: Shurong
+repository-code: "https://github.com/CAOShurong/didyoulearn"
+url: "https://caoshurong.github.io/didyoulearn/"
+license: MIT
+version: 0.1.0
+date-released: 2026-08-06

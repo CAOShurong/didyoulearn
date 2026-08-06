@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "task_id": "economics.opportunity-cost",
+  "version": "1.0.0",
+  "title": "Opportunity cost is the value of the best forgone alternative",
+  "domain": "economics",
+  "level": "introductory",
+  "language": "en",
+  "review_status": "community-draft",
+  "estimated_teaching_minutes": 7,
+  "learning_objectives": [
+    "Identify the best forgone alternative in a choice.",
+    "Include relevant non-monetary costs such as time.",
+    "Avoid adding the values of every possible alternative."
+  ],
+  "prerequisites": ["Basic choice under constraints"],
+  "sources": [
+    {
+      "title": "How Individuals Make Choices Based on Their Budget Constraint",
+      "publisher": "OpenStax",
+      "url": "https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "oc-m1",
+      "description": "Opportunity cost is always equal to the money paid."
+    },
+    {
+      "id": "oc-m2",
+      "description": "Opportunity cost is the sum of all alternatives not chosen."
+    }
+  ],
+  "critical_errors": [
+    {
+      "id": "oc-e1",
+      "description": "Defines opportunity cost as only the explicit purchase price."
+    },
+    {
+      "id": "oc-e2",
+      "description": "Adds mutually exclusive forgone alternatives instead of selecting the best one."
+    }
+  ],
+  "teaching_brief": {
+    "goal": "Help the learner identify the most valuable alternative sacrificed by a decision.",
+    "learner_profile": "A beginner who equates cost with cash expenditure.",
+    "instructions": [
+      "Use one example involving money and one involving time.",
+      "Ask which single alternative would have been chosen next.",
+      "Distinguish sunk costs from the opportunity cost of the current decision.",
+      "Have the learner generate a personal low-stakes example."
+    ],
+    "prohibited_disclosures": [
+      "Do not reveal held-out item wording.",
+      "Do not define opportunity cost as the sum of all rejected choices."
+    ]
+  },
+  "forms": {
+    "pretest": [
+      {
+        "id": "oc-pre-1",
+        "type": "single_choice",
+        "prompt": "You spend a free evening at a concert instead of studying, your best alternative. What is the opportunity cost?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "Only the ticket price" },
+          { "id": "b", "text": "The value of the study opportunity forgone, plus other relevant incremental resources" },
+          { "id": "c", "text": "Every activity you could possibly imagine" },
+          { "id": "d", "text": "Zero because the evening was free" }
+        ],
+        "answer": "b"
+      },
+      {
+        "id": "oc-pre-2",
+        "type": "single_choice",
+        "prompt": "Why is opportunity cost based on the best forgone alternative?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "Only one mutually exclusive alternative would actually have been selected next." },
+          { "id": "b", "text": "All alternatives can be consumed simultaneously." },
+          { "id": "c", "text": "Money is irrelevant to every decision." },
+          { "id": "d", "text": "The chosen option has no benefits." }
+        ],
+        "answer": "a"
+      }
+    ],
+    "posttest": [
+      {
+        "id": "oc-post-1",
+        "type": "single_choice",
+        "prompt": "A student takes an unpaid internship. The best alternative is a paid job. What belongs in the opportunity cost?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "The wages and other value forgone from the paid job" },
+          { "id": "b", "text": "Only the internship's commuting cost" },
+          { "id": "c", "text": "The income of every job in the city added together" },
+          { "id": "d", "text": "Nothing because the internship is unpaid" }
+        ],
+        "answer": "a"
+      },
+      {
+        "id": "oc-post-2",
+        "type": "single_choice",
+        "prompt": "A nonrefundable ticket was purchased last month. When deciding today whether to attend, which fact is most relevant?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "The ticket price must determine today's choice." },
+          { "id": "b", "text": "Compare today's benefits and costs, including the best use of the time; the sunk ticket payment cannot be recovered." },
+          { "id": "c", "text": "Opportunity cost no longer exists." },
+          { "id": "d", "text": "Add the value of every possible activity." }
+        ],
+        "answer": "b"
+      }
+    ],
+    "transfer": [
+      {
+        "id": "oc-transfer-1",
+        "type": "single_choice",
+        "prompt": "A lab uses its only microscope for Project A. Project B was the next-best feasible use. What is the microscope-related opportunity cost?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "The value Project B would have produced" },
+          { "id": "b", "text": "The original purchase price only" },
+          { "id": "c", "text": "The value of Projects B, C, D, and every future idea added together" },
+          { "id": "d", "text": "Zero because the lab already owns it" }
+        ],
+        "answer": "a"
+      },
+      {
+        "id": "oc-transfer-2",
+        "type": "single_choice",
+        "prompt": "A free online course requires 30 hours. What shows that it still has a cost?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "The 30 hours could have been used for the best alternative activity." },
+          { "id": "b", "text": "Free goods never require choices." },
+          { "id": "c", "text": "Only prices create scarcity." },
+          { "id": "d", "text": "Time has no economic value." }
+        ],
+        "answer": "a"
+      }
+    ],
+    "retention": [
+      {
+        "id": "oc-retention-1",
+        "type": "single_choice",
+        "prompt": "Opportunity cost is best summarized as...",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "the value of the next-best alternative forgone" },
+          { "id": "b", "text": "the sum of all imagined alternatives" },
+          { "id": "c", "text": "only explicit cash spending" },
+          { "id": "d", "text": "a past payment that cannot change" }
+        ],
+        "answer": "a"
+      },
+      {
+        "id": "oc-retention-2",
+        "type": "single_choice",
+        "prompt": "Which resource can create opportunity cost even when no money is paid?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "Time" },
+          { "id": "b", "text": "Only coins" },
+          { "id": "c", "text": "Only bank loans" },
+          { "id": "d", "text": "None" }
+        ],
+        "answer": "a"
+      }
+    ]
+  }
+}

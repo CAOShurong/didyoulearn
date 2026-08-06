@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" role="img" aria-labelledby="title desc">
+  <title id="title">DidYouLearn seven-stage study protocol</title>
+  <desc id="desc">The study obtains consent, diagnoses prior knowledge, assigns a tutor, runs a bounded lesson, tests mastery and transfer, collects reflection, and schedules retention.</desc>
+  <rect width="1600" height="760" fill="#fffdf8"/>
+  <rect x="52" y="44" width="1496" height="672" rx="8" fill="#f3f0e8" stroke="#c9c1b3" stroke-width="2"/>
+  <rect x="52" y="44" width="1496" height="14" fill="#173b4c"/>
+  <text x="120" y="112" fill="#a44a3f" font-family="ui-monospace,Consolas,monospace" font-size="17" font-weight="700" letter-spacing="4">PRE-REGISTERED STUDY FLOW</text>
+  <text x="120" y="174" fill="#18252c" font-family="Georgia,serif" font-size="48" font-weight="700">One learner. One topic. One tutor condition.</text>
+  <text x="120" y="214" fill="#5e6a6e" font-family="Arial,sans-serif" font-size="23">Learning persists, so the same concept is never taught twice to the same participant.</text>
+
+  <path d="M188 372H1412" stroke="#b9b1a4" stroke-width="3"/>
+
+  <g font-family="Arial,sans-serif">
+    <g transform="translate(188 372)">
+      <circle r="38" fill="#173b4c"/>
+      <text y="8" text-anchor="middle" fill="#fffdf8" font-family="Georgia,serif" font-size="25" font-weight="700">1</text>
+      <text y="78" text-anchor="middle" fill="#18252c" font-family="Georgia,serif" font-size="22" font-weight="700">Consent</text>
+      <text y="108" text-anchor="middle" fill="#5e6a6e" font-size="16">Minimize data</text>
+    </g>
+    <g transform="translate(392 372)">
+      <circle r="38" fill="#a44a3f"/>
+      <text y="8" text-anchor="middle" fill="#fffdf8" font-family="Georgia,serif" font-size="25" font-weight="700">2</text>
+      <text y="78" text-anchor="middle" fill="#18252c" font-family="Georgia,serif" font-size="22" font-weight="700">Pretest</text>
+      <text y="108" text-anchor="middle" fill="#5e6a6e" font-size="16">Prior knowledge</text>
+    </g>
+    <g transform="translate(596 372)">
+      <circle r="38" fill="#1e6867"/>
+      <text y="8" text-anchor="middle" fill="#fffdf8" font-family="Georgia,serif" font-size="25" font-weight="700">3</text>
+      <text y="78" text-anchor="middle" fill="#18252c" font-family="Georgia,serif" font-size="22" font-weight="700">Assign</text>
+      <text y="108" text-anchor="middle" fill="#5e6a6e" font-size="16">Balanced condition</text>
+    </g>
+    <g transform="translate(800 372)">
+      <circle r="50" fill="#173b4c" stroke="#9fb8b3" stroke-width="10"/>
+      <text y="8" text-anchor="middle" fill="#fffdf8" font-family="Georgia,serif" font-size="25" font-weight="700">4</text>
+      <text y="88" text-anchor="middle" fill="#18252c" font-family="Georgia,serif" font-size="24" font-weight="700">Teach</text>
+      <text y="118" text-anchor="middle" fill="#5e6a6e" font-size="16">Bounded interaction</text>
+    </g>
+    <g transform="translate(1004 372)">
+      <circle r="38" fill="#1e6867"/>
+      <text y="8" text-anchor="middle" fill="#fffdf8" font-family="Georgia,serif" font-size="25" font-weight="700">5</text>
+      <text y="78" text-anchor="middle" fill="#18252c" font-family="Georgia,serif" font-size="22" font-weight="700">Verify</text>
+      <text y="108" text-anchor="middle" fill="#5e6a6e" font-size="16">Mastery + transfer</text>
+    </g>
+    <g transform="translate(1208 372)">
+      <circle r="38" fill="#a2762d"/>
+      <text y="8" text-anchor="middle" fill="#fffdf8" font-family="Georgia,serif" font-size="25" font-weight="700">6</text>
+      <text y="78" text-anchor="middle" fill="#18252c" font-family="Georgia,serif" font-size="22" font-weight="700">Reflect</text>
+      <text y="108" text-anchor="middle" fill="#5e6a6e" font-size="16">Confidence + effort</text>
+    </g>
+    <g transform="translate(1412 372)">
+      <circle r="38" fill="#173b4c"/>
+      <text y="8" text-anchor="middle" fill="#fffdf8" font-family="Georgia,serif" font-size="25" font-weight="700">7</text>
+      <text y="78" text-anchor="middle" fill="#18252c" font-family="Georgia,serif" font-size="22" font-weight="700">Retest</text>
+      <text y="108" text-anchor="middle" fill="#5e6a6e" font-size="16">Delayed retention</text>
+    </g>
+  </g>
+
+  <g transform="translate(120 566)">
+    <rect width="1360" height="96" rx="4" fill="#e6efec" stroke="#9fb8b3"/>
+    <text x="34" y="38" fill="#1e6867" font-family="ui-monospace,Consolas,monospace" font-size="16" font-weight="700" letter-spacing="2">PRIMARY COMPARISON</text>
+    <text x="34" y="70" fill="#18252c" font-family="Arial,sans-serif" font-size="21">Covariance-adjusted unaided post-test performance, with transfer and retention reported separately.</text>
+  </g>
+</svg>

@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "task_id": "research.correlation-causation",
+  "version": "1.0.0",
+  "title": "Why association alone does not identify causation",
+  "domain": "research-methods",
+  "level": "undergraduate",
+  "language": "en",
+  "review_status": "community-draft",
+  "estimated_teaching_minutes": 8,
+  "learning_objectives": [
+    "Distinguish an observed association from a causal effect.",
+    "Identify confounding and reverse causation as alternative explanations.",
+    "Recognize how random assignment helps identify causal effects."
+  ],
+  "prerequisites": ["Variables", "Basic study designs"],
+  "sources": [
+    {
+      "title": "Analyzing Findings: Correlation Does Not Indicate Causation",
+      "publisher": "OpenStax",
+      "url": "https://openstax.org/books/psychology-2e/pages/2-3-analyzing-findings"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "cc-m1",
+      "description": "A strong or statistically significant correlation proves that one variable caused the other."
+    },
+    {
+      "id": "cc-m2",
+      "description": "Controlling for one measured variable removes every possible confounder."
+    }
+  ],
+  "critical_errors": [
+    {
+      "id": "cc-e1",
+      "description": "States that association alone establishes causal direction."
+    },
+    {
+      "id": "cc-e2",
+      "description": "Claims that observational adjustment guarantees removal of all confounding."
+    }
+  ],
+  "teaching_brief": {
+    "goal": "Help the learner generate and test alternative explanations for an observed association.",
+    "learner_profile": "An undergraduate who tends to read causal language into correlational findings.",
+    "instructions": [
+      "Use one example with a plausible confounder and one with reverse causation.",
+      "Ask what intervention and comparison would identify the causal question.",
+      "Distinguish random sampling from random assignment.",
+      "Have the learner rewrite an overclaimed headline."
+    ],
+    "prohibited_disclosures": [
+      "Do not reveal held-out item wording.",
+      "Do not say that statistical significance alone proves causality."
+    ]
+  },
+  "forms": {
+    "pretest": [
+      {
+        "id": "cc-pre-1",
+        "type": "single_choice",
+        "prompt": "People carrying lighters have higher rates of lung disease. Why does this not show that lighters cause the disease?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "Smoking can cause both lighter carrying and lung disease." },
+          { "id": "b", "text": "Associations are never measurable." },
+          { "id": "c", "text": "Lung disease always causes lighter purchases." },
+          { "id": "d", "text": "The sample must contain no people." }
+        ],
+        "answer": "a"
+      },
+      {
+        "id": "cc-pre-2",
+        "type": "single_choice",
+        "prompt": "What is the main causal advantage of random assignment in a sufficiently large experiment?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "It tends to balance both observed and unobserved pre-treatment causes across groups." },
+          { "id": "b", "text": "It guarantees every measurement is error-free." },
+          { "id": "c", "text": "It makes all participants identical." },
+          { "id": "d", "text": "It replaces the need for a comparison group." }
+        ],
+        "answer": "a"
+      }
+    ],
+    "posttest": [
+      {
+        "id": "cc-post-1",
+        "type": "single_choice",
+        "prompt": "Students who attend optional tutorials earn higher grades. Which is a plausible confounder?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "Prior motivation may increase both attendance and grades." },
+          { "id": "b", "text": "Grades cannot be measured." },
+          { "id": "c", "text": "Tutorials and grades are the same variable." },
+          { "id": "d", "text": "No third variable can exist." }
+        ],
+        "answer": "a"
+      },
+      {
+        "id": "cc-post-2",
+        "type": "single_choice",
+        "prompt": "A survey finds poor sleep associated with anxiety. What alternative direction must be considered?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "Anxiety may also worsen sleep." },
+          { "id": "b", "text": "Surveys automatically randomize sleep." },
+          { "id": "c", "text": "Association fixes the direction." },
+          { "id": "d", "text": "Reverse causation is mathematically impossible." }
+        ],
+        "answer": "a"
+      }
+    ],
+    "transfer": [
+      {
+        "id": "cc-transfer-1",
+        "type": "single_choice",
+        "prompt": "Neighborhoods with more trees have lower summer temperatures. Which study most directly tests whether adding trees lowers temperature?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "Randomly assign comparable sites to receive trees or not, then measure temperature under a declared protocol." },
+          { "id": "b", "text": "Photograph one cool park." },
+          { "id": "c", "text": "Repeat the same correlation in the same data." },
+          { "id": "d", "text": "Ask residents whether trees feel causal." }
+        ],
+        "answer": "a"
+      },
+      {
+        "id": "cc-transfer-2",
+        "type": "single_choice",
+        "prompt": "A headline says 'Reading news causes political participation' from an observational correlation. What is the most accurate revision?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "News reading was associated with participation; causal direction and confounding remain unresolved." },
+          { "id": "b", "text": "The correlation proves reading is the only cause." },
+          { "id": "c", "text": "Statistical significance eliminates reverse causation." },
+          { "id": "d", "text": "Observational data can never contain useful information." }
+        ],
+        "answer": "a"
+      }
+    ],
+    "retention": [
+      {
+        "id": "cc-retention-1",
+        "type": "single_choice",
+        "prompt": "Name two classic threats when interpreting an association causally.",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "Confounding and reverse causation" },
+          { "id": "b", "text": "Font size and page margins" },
+          { "id": "c", "text": "Averages and percentages" },
+          { "id": "d", "text": "Random assignment and replication" }
+        ],
+        "answer": "a"
+      },
+      {
+        "id": "cc-retention-2",
+        "type": "single_choice",
+        "prompt": "Random sampling primarily supports generalization; random assignment primarily supports...",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "causal comparison between assigned conditions" },
+          { "id": "b", "text": "a guaranteed representative population" },
+          { "id": "c", "text": "perfect measurement" },
+          { "id": "d", "text": "removal of all attrition" }
+        ],
+        "answer": "a"
+      }
+    ]
+  }
+}

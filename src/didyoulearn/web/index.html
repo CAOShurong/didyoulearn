@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="description" content="DidYouLearn measures whether an AI tutor produced demonstrated learning, not merely a fluent answer.">
+  <meta name="color-scheme" content="light">
+  <title>DidYouLearn · Outcome-based AI tutor evaluation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="DidYouLearn home">
+      <span class="mark">DYL</span>
+      <span>DidYouLearn</span>
+    </a>
+    <nav aria-label="Primary">
+      <a href="#lab">Local lab</a>
+      <a href="#method">Method</a>
+      <a href="https://github.com/CAOShurong/didyoulearn">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Outcome-based AI tutor evaluation</p>
+        <h1>Do not ask which AI sounds smartest.</h1>
+        <p class="lead">Ask whether the learner can explain, transfer, and remember the idea after
+          the AI is gone.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#lab">Run a local trial</a>
+          <a class="button secondary" href="#method">Read the protocol</a>
+        </div>
+        <p class="trust-line">No account · No model API · No analytics · Data stays in this browser</p>
+      </div>
+      <div class="hero-figure" role="img" aria-label="A learner moves from a diagnostic pretest through an AI lesson to unaided mastery and transfer tests">
+        <div class="figure-caption">THE UNIT OF EVIDENCE</div>
+        <div class="learner-state">
+          <span class="state-number">01</span>
+          <div><strong>Before</strong><small>diagnose the misconception</small></div>
+        </div>
+        <div class="connector"></div>
+        <div class="learner-state emphasis">
+          <span class="state-number">02</span>
+          <div><strong>Teach</strong><small>one bounded AI interaction</small></div>
+        </div>
+        <div class="connector"></div>
+        <div class="learner-state">
+          <span class="state-number">03</span>
+          <div><strong>After</strong><small>test without AI assistance</small></div>
+        </div>
+        <div class="outcome-strip">
+          <span>truth</span><span>mastery</span><span>transfer</span><span>retention</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="principle-grid" aria-label="Core principles">
+      <article>
+        <span>01</span>
+        <h2>Correctness is a gate.</h2>
+        <p>A clear falsehood does not become good teaching because it felt easy to understand.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h2>Learning is measured unaided.</h2>
+        <p>The learner completes new questions after the tutor transcript is out of reach.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h2>Confidence is not mastery.</h2>
+        <p>The report exposes the gap between perceived understanding and demonstrated performance.</p>
+      </article>
+    </section>
+
+    <section id="lab" class="lab-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Browser-local community lab</p>
+          <h2>Complete one learning trial.</h2>
+        </div>
+        <p>Use the built-in sample or import a reviewed task pack. The lab never contacts a model.
+          You carry the teaching brief to the product you want to study, then return for an unaided
+          assessment.</p>
+      </div>
+
+      <div class="lab-shell">
+        <aside class="lab-sidebar">
+          <p class="sidebar-label">Protocol</p>
+          <ol id="progress" class="progress">
+            <li data-phase="setup" class="active"><span>1</span>Setup</li>
+            <li data-phase="pretest"><span>2</span>Pretest</li>
+            <li data-phase="teach"><span>3</span>Teach</li>
+            <li data-phase="posttest"><span>4</span>Mastery</li>
+            <li data-phase="transfer"><span>5</span>Transfer</li>
+            <li data-phase="reflect"><span>6</span>Reflect</li>
+            <li data-phase="export"><span>7</span>Export</li>
+          </ol>
+          <div class="boundary">
+            <strong>Evidence boundary</strong>
+            <p>A local run records a claimed product identity. It does not prove which provider
+              generated a pasted transcript.</p>
+          </div>
+        </aside>
+
+        <div class="lab-main">
+          <section class="phase active" data-phase-panel="setup">
+            <p class="step-label">Step 1 of 7</p>
+            <h3>Choose a task and participant label.</h3>
+            <p class="phase-intro">The included sample is a community draft for testing the
+              workflow, not an expert-validated assessment instrument.</p>
+
+            <div class="task-card">
+              <div>
+                <p class="eyebrow">Built-in sample</p>
+                <h4 id="sample-title">What a p-value does and does not mean</h4>
+                <p>Statistics · undergraduate · approximately 8 minutes</p>
+              </div>
+              <button id="use-sample" class="button primary" type="button">Use sample task</button>
+            </div>
+
+            <div class="divider"><span>or import a task pack</span></div>
+            <label class="file-drop" for="task-file">
+              <input id="task-file" type="file" accept=".json,application/json">
+              <strong>Select a DidYouLearn task JSON file</strong>
+              <span>The file is read locally and is not uploaded.</span>
+            </label>
+
+            <div id="selected-task" class="selected-task" hidden></div>
+            <label class="field">
+              <span>Participant pseudonym</span>
+              <input id="participant-id" value="p-local-001" pattern="[a-z0-9][a-z0-9._-]{2,79}" autocomplete="off">
+              <small>Do not enter a name, email address, or student number.</small>
+            </label>
+            <div class="action-row">
+              <button class="button primary next" data-next="pretest" type="button" disabled>Begin pretest</button>
+            </div>
+          </section>
+
+          <section class="phase" data-phase-panel="pretest">
+            <p class="step-label">Step 2 of 7</p>
+            <h3>Measure what you know before tutoring.</h3>
+            <p class="phase-intro">Do not use a model, search engine, notes, or course materials.</p>
+            <form id="pretest-form" class="assessment"></form>
+            <div class="action-row">
+              <button class="button secondary back" data-back="setup" type="button">Back</button>
+              <button class="button primary next" data-next="teach" type="button">Lock pretest</button>
+            </div>
+          </section>
+
+          <section class="phase" data-phase-panel="teach">
+            <p class="step-label">Step 3 of 7</p>
+            <h3>Run one bounded teaching interaction.</h3>
+            <p class="phase-intro">Start a new conversation in the product you want to study. Paste
+              the brief below, interact naturally, and return with the transcript.</p>
+
+            <div class="tutor-fields">
+              <label class="field"><span>Product</span><input id="tutor-product" placeholder="e.g. ChatGPT"></label>
+              <label class="field"><span>Displayed model</span><input id="tutor-model" placeholder="e.g. product-displayed label"></label>
+              <label class="field"><span>Mode</span><input id="tutor-mode" placeholder="e.g. Study mode or standard"></label>
+            </div>
+
+            <div class="prompt-box">
+              <div class="prompt-head"><strong>Teaching brief</strong>
+                <button id="copy-brief" class="text-button" type="button">Copy brief</button>
+              </div>
+              <pre id="teaching-brief"></pre>
+            </div>
+
+            <div class="timer-row">
+              <div><span class="timer-label">Recorded teaching time</span><strong id="timer">00:00</strong></div>
+              <button id="timer-toggle" class="button secondary" type="button">Start timer</button>
+            </div>
+
+            <label class="field">
+              <span>Transcript or concise evidence note</span>
+              <textarea id="transcript" rows="8" placeholder="Paste the complete teaching interaction when the task permits it. Keep private material out of public releases."></textarea>
+            </label>
+            <label class="check-field">
+              <input id="close-tutor" type="checkbox">
+              <span>I closed or hid the tutor and transcript before continuing.</span>
+            </label>
+            <div class="action-row">
+              <button class="button secondary back" data-back="pretest" type="button">Back</button>
+              <button class="button primary next" data-next="posttest" type="button">Begin unaided mastery test</button>
+            </div>
+          </section>
+
+          <section class="phase" data-phase-panel="posttest">
+            <p class="step-label">Step 4 of 7</p>
+            <h3>Demonstrate immediate mastery.</h3>
+            <p class="phase-intro">These are different questions targeting the same learning objectives.</p>
+            <form id="posttest-form" class="assessment"></form>
+            <div class="action-row">
+              <button class="button primary next" data-next="transfer" type="button">Continue to transfer</button>
+            </div>
+          </section>
+
+          <section class="phase" data-phase-panel="transfer">
+            <p class="step-label">Step 5 of 7</p>
+            <h3>Apply the idea in a new setting.</h3>
+            <p class="phase-intro">Transfer distinguishes reusable understanding from remembering the teaching example.</p>
+            <form id="transfer-form" class="assessment"></form>
+            <div class="action-row">
+              <button class="button primary next" data-next="reflect" type="button">Record reflection</button>
+            </div>
+          </section>
+
+          <section class="phase" data-phase-panel="reflect">
+            <p class="step-label">Step 6 of 7</p>
+            <h3>Separate confidence from demonstrated mastery.</h3>
+            <div class="slider-field">
+              <label for="understanding-before">Understanding before tutoring <output id="before-output">30</output></label>
+              <input id="understanding-before" type="range" min="0" max="100" value="30">
+            </div>
+            <div class="slider-field">
+              <label for="understanding-after">Understanding after tutoring <output id="after-output">75</output></label>
+              <input id="understanding-after" type="range" min="0" max="100" value="75">
+            </div>
+            <div class="slider-field">
+              <label for="cognitive-effort">Mental effort required <output id="effort-output">55</output></label>
+              <input id="cognitive-effort" type="range" min="0" max="100" value="55">
+            </div>
+            <div class="action-row">
+              <button class="button primary next" data-next="export" type="button">Build run record</button>
+            </div>
+          </section>
+
+          <section class="phase" data-phase-panel="export">
+            <p class="step-label">Step 7 of 7</p>
+            <h3>Export a portable evidence record.</h3>
+            <div id="local-summary" class="local-summary"></div>
+            <div class="export-note">
+              <strong>Not a public model result yet.</strong>
+              <p>This run is marked <code>community-submitted</code> and <code>not-reviewed</code>.
+                A correctness reviewer and a declared study protocol are required before it can
+                contribute to a verified ranking.</p>
+            </div>
+            <div class="action-row">
+              <button id="download-run" class="button primary" type="button">Download run JSON</button>
+              <button id="reset-lab" class="button secondary" type="button">Start another trial</button>
+            </div>
+          </section>
+
+          <p id="lab-message" class="lab-message" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="method" class="method-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">What makes the ranking different</p><h2>A scorecard, not one magic number.</h2></div>
+      </div>
+      <div class="method-table" role="table" aria-label="DidYouLearn outcome dimensions">
+        <div class="method-row header" role="row">
+          <span role="columnheader">Dimension</span><span role="columnheader">Observed evidence</span><span role="columnheader">Why it matters</span>
+        </div>
+        <div class="method-row" role="row">
+          <strong role="cell">Truth</strong><span role="cell">Critical-error review</span><span role="cell">A fluent falsehood cannot rank highly.</span>
+        </div>
+        <div class="method-row" role="row">
+          <strong role="cell">Mastery</strong><span role="cell">Unaided equivalent-form post-test</span><span role="cell">Measures more than preference.</span>
+        </div>
+        <div class="method-row" role="row">
+          <strong role="cell">Transfer</strong><span role="cell">Novel context and problem structure</span><span role="cell">Tests reusable understanding.</span>
+        </div>
+        <div class="method-row" role="row">
+          <strong role="cell">Retention</strong><span role="cell">Delayed assessment</span><span role="cell">Immediate fluency may disappear.</span>
+        </div>
+        <div class="method-row" role="row">
+          <strong role="cell">Calibration</strong><span role="cell">Confidence minus mastery</span><span role="cell">Exposes the illusion of understanding.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>DidYouLearn</strong>
+    <span>Open research infrastructure for outcome-based AI tutor evaluation.</span>
+    <a href="https://github.com/CAOShurong/didyoulearn">Source and methodology</a>
+  </footer>
+
+  <script src="sample-task.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+window.DYL_SAMPLE_TASK = {
+  schema_version: "1.0",
+  task_id: "statistics.p-value-browser-sample",
+  version: "1.0.0",
+  title: "What a p-value does and does not mean",
+  domain: "statistics",
+  level: "undergraduate",
+  language: "en",
+  review_status: "community-draft",
+  estimated_teaching_minutes: 8,
+  learning_objectives: [
+    "Interpret a p-value as a probability conditional on a statistical model.",
+    "Reject the claim that a p-value is the probability that the null hypothesis is true.",
+    "Separate statistical evidence from effect size and practical importance."
+  ],
+  prerequisites: ["Basic probability", "Null and alternative hypotheses"],
+  sources: [{
+    title: "The ASA Statement on p-Values: Context, Process, and Purpose",
+    publisher: "American Statistical Association",
+    url: "https://doi.org/10.1080/00031305.2016.1154108"
+  }],
+  misconceptions: [
+    { id: "pv-m1", description: "A p-value of 0.03 means a 3% probability that the null is true." },
+    { id: "pv-m2", description: "A smaller p-value necessarily means a larger effect." }
+  ],
+  critical_errors: [
+    { id: "pv-e1", description: "Defines the p-value as the probability that the null is true." },
+    { id: "pv-e2", description: "Claims significance alone establishes practical importance." }
+  ],
+  teaching_brief: {
+    goal: "Help the learner interpret p-values without reversing the conditional probability.",
+    learner_profile: "An undergraduate who has seen hypothesis tests but confuses P(data | null) with P(null | data).",
+    instructions: [
+      "Diagnose the learner's current interpretation before explaining.",
+      "Use one concrete example and explicitly name what is held conditional.",
+      "Ask the learner to restate the meaning in their own words.",
+      "Contrast evidence, effect size, and practical importance."
+    ],
+    prohibited_disclosures: [
+      "Do not provide answers to an assessment.",
+      "Do not state that a p-value is a posterior probability for a hypothesis."
+    ]
+  },
+  forms: {
+    pretest: [
+      {
+        id: "pvb-pre-1",
+        type: "single_choice",
+        prompt: "A study reports p = 0.04 under a null hypothesis. Which interpretation is closest?",
+        points: 1,
+        choices: [
+          { id: "a", text: "The null hypothesis has a 4% probability of being true." },
+          { id: "b", text: "If the null model were true, data at least this incompatible would occur with probability 4%." },
+          { id: "c", text: "There is a 96% probability that the alternative is true." },
+          { id: "d", text: "The effect has a 4% probability of being caused by chance." }
+        ],
+        answer: "b"
+      },
+      {
+        id: "pvb-pre-2",
+        type: "single_choice",
+        prompt: "Two large studies report p = 0.001 for effects of different sizes. What follows from the p-values alone?",
+        points: 1,
+        choices: [
+          { id: "a", text: "Both effects are equally large." },
+          { id: "b", text: "Both effects are practically important." },
+          { id: "c", text: "Neither effect size nor practical importance is determined by the p-values alone." },
+          { id: "d", text: "Both studies prove a causal effect." }
+        ],
+        answer: "c"
+      }
+    ],
+    posttest: [
+      {
+        id: "pvb-post-1",
+        type: "single_choice",
+        prompt: "A test gives p = 0.02. Which probability is directly described?",
+        points: 1,
+        choices: [
+          { id: "a", text: "P(null hypothesis is true | observed data)" },
+          { id: "b", text: "P(observed-or-more-extreme data | null model)" },
+          { id: "c", text: "P(researcher made an error | observed data)" },
+          { id: "d", text: "P(result will replicate | observed data)" }
+        ],
+        answer: "b"
+      },
+      {
+        id: "pvb-post-2",
+        type: "single_choice",
+        prompt: "A tiny treatment effect has p < 0.001 in a sample of one million. What is still needed to judge importance?",
+        points: 1,
+        choices: [
+          { id: "a", text: "Only a smaller significance threshold" },
+          { id: "b", text: "Effect size, uncertainty, and domain consequences" },
+          { id: "c", text: "A second p-value below 0.001" },
+          { id: "d", text: "Nothing; the p-value establishes importance" }
+        ],
+        answer: "b"
+      }
+    ],
+    transfer: [
+      {
+        id: "pvb-transfer-1",
+        type: "single_choice",
+        prompt: "A diagnostic algorithm differs from a baseline with p = 0.049 but improves accuracy by 0.01 percentage points. Which conclusion is defensible?",
+        points: 1,
+        choices: [
+          { id: "a", text: "The algorithm is certainly useful because p < 0.05." },
+          { id: "b", text: "The null is false with probability 95.1%." },
+          { id: "c", text: "The data meet the chosen significance rule, but usefulness requires effect-size and cost analysis." },
+          { id: "d", text: "The improvement cannot be sampling variation." }
+        ],
+        answer: "c"
+      },
+      {
+        id: "pvb-transfer-2",
+        type: "single_choice",
+        prompt: "What additional framework is needed to assign a probability to a hypothesis after observing data?",
+        points: 1,
+        choices: [
+          { id: "a", text: "A Bayesian model with prior assumptions and a likelihood" },
+          { id: "b", text: "A rule that p must be below 0.05" },
+          { id: "c", text: "A larger font for the p-value" },
+          { id: "d", text: "A random-number generator" }
+        ],
+        answer: "a"
+      }
+    ],
+    retention: [
+      {
+        id: "pvb-retention-1",
+        type: "single_choice",
+        prompt: "A p-value is computed assuming...",
+        points: 1,
+        choices: [
+          { id: "a", text: "the tested statistical model, including the null, is true" },
+          { id: "b", text: "the alternative is certainly true" },
+          { id: "c", text: "the effect is practically important" },
+          { id: "d", text: "the experiment has no bias" }
+        ],
+        answer: "a"
+      }
+    ]
+  }
+};

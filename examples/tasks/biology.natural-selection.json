@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "task_id": "biology.natural-selection",
+  "version": "1.0.0",
+  "title": "Natural selection acts on variation in populations",
+  "domain": "biology",
+  "level": "introductory",
+  "language": "en",
+  "review_status": "community-draft",
+  "estimated_teaching_minutes": 8,
+  "learning_objectives": [
+    "Explain natural selection using heritable variation and differential reproductive success.",
+    "Distinguish population change across generations from an individual changing because it needs to.",
+    "Apply the mechanism to a new environmental pressure."
+  ],
+  "prerequisites": ["Genes and inheritance", "Populations and generations"],
+  "sources": [
+    {
+      "title": "Natural selection",
+      "publisher": "Understanding Evolution, University of California Museum of Paleontology",
+      "url": "https://evolution.berkeley.edu/evolution-101/mechanisms-the-processes-of-evolution/natural-selection/"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "ns-m1",
+      "description": "Individual organisms evolve the traits they need during their lifetimes."
+    },
+    {
+      "id": "ns-m2",
+      "description": "Natural selection intentionally gives organisms useful traits."
+    }
+  ],
+  "critical_errors": [
+    {
+      "id": "ns-e1",
+      "description": "Claims that need or effort directly creates a heritable adaptive trait in an individual."
+    },
+    {
+      "id": "ns-e2",
+      "description": "Describes natural selection as a purposeful agent with a future goal."
+    }
+  ],
+  "teaching_brief": {
+    "goal": "Help the learner explain natural selection as a population-level generational process.",
+    "learner_profile": "A beginner who uses phrases such as 'the animal adapted because it needed to.'",
+    "instructions": [
+      "Use an example with pre-existing heritable variation.",
+      "Track survival or reproduction across multiple generations.",
+      "Contrast individual acclimation with evolutionary change.",
+      "Ask the learner to explain a new case without purpose-driven language."
+    ],
+    "prohibited_disclosures": [
+      "Do not reveal held-out item wording.",
+      "Do not imply that natural selection plans ahead."
+    ]
+  },
+  "forms": {
+    "pretest": [
+      {
+        "id": "ns-pre-1",
+        "type": "single_choice",
+        "prompt": "In a beetle population, color is heritable and birds more often catch green beetles than brown beetles. What directly changes first?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "Every green beetle turns brown." },
+          { "id": "b", "text": "Brown beetles leave a larger share of offspring." },
+          { "id": "c", "text": "Birds intentionally create brown mutations." },
+          { "id": "d", "text": "The population stops reproducing." }
+        ],
+        "answer": "b"
+      },
+      {
+        "id": "ns-pre-2",
+        "type": "single_choice",
+        "prompt": "Which statement describes evolution by natural selection?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "Individuals practice until a useful trait becomes genetic." },
+          { "id": "b", "text": "Heritable variants differ in reproductive success, changing variant frequencies." },
+          { "id": "c", "text": "A species chooses traits needed for the future." },
+          { "id": "d", "text": "All mutations appear because the environment requests them." }
+        ],
+        "answer": "b"
+      }
+    ],
+    "posttest": [
+      {
+        "id": "ns-post-1",
+        "type": "single_choice",
+        "prompt": "Why does antibiotic resistance become common in a bacterial population?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "Individual bacteria decide to resist the drug." },
+          { "id": "b", "text": "Antibiotics teach every bacterium the same mutation." },
+          { "id": "c", "text": "Resistant variants survive and reproduce more under treatment." },
+          { "id": "d", "text": "The population has a future goal of resistance." }
+        ],
+        "answer": "c"
+      },
+      {
+        "id": "ns-post-2",
+        "type": "single_choice",
+        "prompt": "Which condition is necessary for natural selection to change a trait distribution?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "Relevant variation must be heritable." },
+          { "id": "b", "text": "Every individual must change equally." },
+          { "id": "c", "text": "The environment must know the best future trait." },
+          { "id": "d", "text": "No reproduction may occur." }
+        ],
+        "answer": "a"
+      }
+    ],
+    "transfer": [
+      {
+        "id": "ns-transfer-1",
+        "type": "single_choice",
+        "prompt": "A drought leaves mostly hard seeds. Birds already vary in heritable beak strength. Which sequence is natural selection?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "All birds strengthen their beaks by trying, then transmit the exercise." },
+          { "id": "b", "text": "Stronger-beaked birds obtain more food and leave more offspring, so the trait becomes more common." },
+          { "id": "c", "text": "The drought designs stronger beaks." },
+          { "id": "d", "text": "Birds choose the population's future genes." }
+        ],
+        "answer": "b"
+      },
+      {
+        "id": "ns-transfer-2",
+        "type": "single_choice",
+        "prompt": "A person develops larger muscles through training. Why is this not by itself evolution by natural selection?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "It is an acquired change in one individual, not demonstrated heritable population change across generations." },
+          { "id": "b", "text": "Muscles never vary." },
+          { "id": "c", "text": "Natural selection happens only in bacteria." },
+          { "id": "d", "text": "Exercise prevents reproduction." }
+        ],
+        "answer": "a"
+      }
+    ],
+    "retention": [
+      {
+        "id": "ns-retention-1",
+        "type": "single_choice",
+        "prompt": "Natural selection most directly filters...",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "heritable variation through differences in reproductive success" },
+          { "id": "b", "text": "future plans chosen by a species" },
+          { "id": "c", "text": "traits acquired by effort in every individual" },
+          { "id": "d", "text": "only harmful traits" }
+        ],
+        "answer": "a"
+      },
+      {
+        "id": "ns-retention-2",
+        "type": "single_choice",
+        "prompt": "Where is an evolutionary change measured?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "In trait or allele frequencies in a population across generations" },
+          { "id": "b", "text": "Only in one organism's intentions" },
+          { "id": "c", "text": "In the environment's goals" },
+          { "id": "d", "text": "In how hard one organism tries" }
+        ],
+        "answer": "a"
+      }
+    ]
+  }
+}

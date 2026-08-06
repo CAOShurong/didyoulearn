@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="680" viewBox="0 0 1600 680" role="img" aria-labelledby="title desc">
+  <title id="title">DidYouLearn outcome-based AI tutor evaluation</title>
+  <desc id="desc">A three-stage study measures the learner before tutoring, during a bounded AI lesson, and after the AI is removed.</desc>
+  <rect width="1600" height="680" fill="#f3f0e8"/>
+  <rect width="1600" height="16" fill="#173b4c"/>
+  <text x="800" y="80" text-anchor="middle" fill="#a44a3f" font-family="ui-monospace,Consolas,monospace" font-size="18" font-weight="700" letter-spacing="5">OUTCOME-BASED AI TUTOR EVALUATION</text>
+  <text x="800" y="168" text-anchor="middle" fill="#18252c" font-family="Georgia,serif" font-size="76" font-weight="700">DidYouLearn?</text>
+  <text x="800" y="216" text-anchor="middle" fill="#5e6a6e" font-family="Arial,sans-serif" font-size="28">Do not rank the answer. Measure what the learner can do after the AI is gone.</text>
+
+  <line x1="350" y1="394" x2="1250" y2="394" stroke="#c9c1b3" stroke-width="2"/>
+  <circle cx="350" cy="394" r="10" fill="#a44a3f"/>
+  <circle cx="800" cy="394" r="10" fill="#1e6867"/>
+  <circle cx="1250" cy="394" r="10" fill="#173b4c"/>
+
+  <g transform="translate(150 284)">
+    <rect width="400" height="230" rx="4" fill="#fffdf8" stroke="#c9c1b3" stroke-width="2"/>
+    <text x="200" y="48" text-anchor="middle" fill="#a44a3f" font-family="ui-monospace,Consolas,monospace" font-size="17" font-weight="700" letter-spacing="3">01 · DIAGNOSE</text>
+    <circle cx="200" cy="110" r="34" fill="#efe0da"/>
+    <path d="M181 112h38M200 93v38" stroke="#a44a3f" stroke-width="7" stroke-linecap="round"/>
+    <text x="200" y="168" text-anchor="middle" fill="#18252c" font-family="Georgia,serif" font-size="29" font-weight="700">Measure prior knowledge</text>
+    <text x="200" y="201" text-anchor="middle" fill="#5e6a6e" font-family="Arial,sans-serif" font-size="18">Equivalent forms begin with a misconception map.</text>
+  </g>
+
+  <g transform="translate(600 284)">
+    <rect width="400" height="230" rx="4" fill="#e5efed" stroke="#8eaaa5" stroke-width="2"/>
+    <text x="200" y="48" text-anchor="middle" fill="#1e6867" font-family="ui-monospace,Consolas,monospace" font-size="17" font-weight="700" letter-spacing="3">02 · TEACH</text>
+    <circle cx="200" cy="110" r="34" fill="#cfe0dc"/>
+    <path d="M181 100h38M181 112h29M181 124h22" stroke="#1e6867" stroke-width="6" stroke-linecap="round"/>
+    <text x="200" y="168" text-anchor="middle" fill="#18252c" font-family="Georgia,serif" font-size="29" font-weight="700">Run one bounded lesson</text>
+    <text x="200" y="201" text-anchor="middle" fill="#5e6a6e" font-family="Arial,sans-serif" font-size="18">Capture the product, mode, transcript, and time.</text>
+  </g>
+
+  <g transform="translate(1050 284)">
+    <rect width="400" height="230" rx="4" fill="#fffdf8" stroke="#c9c1b3" stroke-width="2"/>
+    <text x="200" y="48" text-anchor="middle" fill="#173b4c" font-family="ui-monospace,Consolas,monospace" font-size="17" font-weight="700" letter-spacing="3">03 · VERIFY</text>
+    <circle cx="200" cy="110" r="34" fill="#dbe5e8"/>
+    <path d="M181 110l13 13 27-31" fill="none" stroke="#173b4c" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="200" y="168" text-anchor="middle" fill="#18252c" font-family="Georgia,serif" font-size="29" font-weight="700">Test without the AI</text>
+    <text x="200" y="201" text-anchor="middle" fill="#5e6a6e" font-family="Arial,sans-serif" font-size="18">Score mastery, transfer, retention, and calibration.</text>
+  </g>
+
+  <g transform="translate(256 570)">
+    <rect width="1088" height="62" rx="31" fill="#173b4c"/>
+    <text x="544" y="39" text-anchor="middle" fill="#f3f0e8" font-family="ui-monospace,Consolas,monospace" font-size="19" font-weight="700" letter-spacing="3">TRUTH GATE  ·  LEARNING GAIN  ·  TRANSFER  ·  RETENTION  ·  ILLUSION GAP</text>
+  </g>
+</svg>

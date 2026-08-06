@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install quality tools and package
+        run: python -m pip install --upgrade pip build pytest ruff && python -m pip install -e .
+      - name: Lint
+        run: ruff check . && ruff format --check .
+      - name: Test
+        run: python -m pytest
+      - name: Validate task registry
+        run: didyoulearn validate examples/tasks --kind task
+      - name: Build static site
+        run: python scripts/build_site.py
+      - name: JavaScript syntax
+        run: node --check src/didyoulearn/web/app.js && node --check src/didyoulearn/web/sample-task.js
+
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: python -m pip install --upgrade pip build
+      - run: python -m build
+      - name: Smoke-test wheel in a clean virtual environment
+        run: |
+          python -m venv /tmp/dyl-venv
+          /tmp/dyl-venv/bin/python -m pip install dist/*.whl
+          /tmp/dyl-venv/bin/didyoulearn doctor
+          /tmp/dyl-venv/bin/didyoulearn demo --output /tmp/dyl-demo

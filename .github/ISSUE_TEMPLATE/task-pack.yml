@@ -1,0 +1,36 @@
+name: Task pack proposal
+description: Propose or review a learning-outcome task.
+title: "[Task] "
+labels: ["task-pack"]
+body:
+  - type: input
+    id: concept
+    attributes:
+      label: Concept and learner level
+    validations:
+      required: true
+  - type: textarea
+    id: objectives
+    attributes:
+      label: Observable learning objectives
+    validations:
+      required: true
+  - type: textarea
+    id: misconceptions
+    attributes:
+      label: Common misconceptions and evidence
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Authoritative sources
+    validations:
+      required: true
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: Rights and privacy
+      options:
+        - label: The proposal contains no proprietary course material or participant data.
+          required: true

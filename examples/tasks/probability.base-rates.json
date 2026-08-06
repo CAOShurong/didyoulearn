@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "task_id": "probability.base-rates",
+  "version": "1.0.0",
+  "title": "Base rates in conditional probability",
+  "domain": "probability",
+  "level": "introductory",
+  "language": "en",
+  "review_status": "community-draft",
+  "estimated_teaching_minutes": 8,
+  "learning_objectives": [
+    "Use natural frequencies to combine prevalence, sensitivity, and false-positive rate.",
+    "Distinguish P(positive | condition) from P(condition | positive).",
+    "Explain why a rare condition can produce many false positives."
+  ],
+  "prerequisites": ["Percentages", "Conditional probability notation"],
+  "sources": [
+    {
+      "title": "Bayes' theorem",
+      "publisher": "NIST/SEMATECH e-Handbook of Statistical Methods",
+      "url": "https://www.itl.nist.gov/div898/handbook/pri/section1/pri12.htm"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "br-m1",
+      "description": "A test with 90% sensitivity means a positive result gives a 90% probability of the condition."
+    },
+    {
+      "id": "br-m2",
+      "description": "The prevalence of the condition does not affect the meaning of a positive result."
+    }
+  ],
+  "critical_errors": [
+    {
+      "id": "br-e1",
+      "description": "Reverses P(positive | condition) and P(condition | positive)."
+    },
+    {
+      "id": "br-e2",
+      "description": "Calculates a posterior probability while omitting the base rate."
+    }
+  ],
+  "teaching_brief": {
+    "goal": "Help the learner reason from a population table rather than reverse a conditional probability.",
+    "learner_profile": "A learner comfortable with percentages but new to Bayes' rule.",
+    "instructions": [
+      "Start with a hypothetical population of 1,000 or 10,000 people.",
+      "Separate true positives from false positives.",
+      "Ask the learner to identify the denominator for P(condition | positive).",
+      "Check understanding with a new prevalence."
+    ],
+    "prohibited_disclosures": [
+      "Do not reveal held-out item wording.",
+      "Do not equate sensitivity with positive predictive value."
+    ]
+  },
+  "forms": {
+    "pretest": [
+      {
+        "id": "br-pre-1",
+        "type": "single_choice",
+        "prompt": "A condition affects 1% of people. A test finds 90% of affected people and is positive for 10% of unaffected people. Why can most positive results be false positives?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "The unaffected population is much larger." },
+          { "id": "b", "text": "Sensitivity never matters." },
+          { "id": "c", "text": "A positive test always means no condition." },
+          { "id": "d", "text": "Percentages cannot be compared." }
+        ],
+        "answer": "a"
+      },
+      {
+        "id": "br-pre-2",
+        "type": "single_choice",
+        "prompt": "Which quantity is sensitivity?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "P(condition | positive)" },
+          { "id": "b", "text": "P(positive | condition)" },
+          { "id": "c", "text": "P(negative | no condition)" },
+          { "id": "d", "text": "P(condition)" }
+        ],
+        "answer": "b"
+      }
+    ],
+    "posttest": [
+      {
+        "id": "br-post-1",
+        "type": "numeric",
+        "prompt": "Among 1,000 people, 10 have a condition. A test correctly flags 9 of them and falsely flags 99 others. What fraction of all positive results are true positives?",
+        "points": 1,
+        "answer": 0.0833,
+        "tolerance": 0.001
+      },
+      {
+        "id": "br-post-2",
+        "type": "single_choice",
+        "prompt": "To calculate P(condition | positive), what should be in the denominator of a natural-frequency calculation?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "Everyone with the condition" },
+          { "id": "b", "text": "Everyone without the condition" },
+          { "id": "c", "text": "All positive results, true and false" },
+          { "id": "d", "text": "Only true positives" }
+        ],
+        "answer": "c"
+      }
+    ],
+    "transfer": [
+      {
+        "id": "br-transfer-1",
+        "type": "single_choice",
+        "prompt": "The same test is used in a high-risk clinic where prevalence is much higher. With sensitivity and specificity unchanged, what generally happens to P(condition | positive)?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "It generally increases." },
+          { "id": "b", "text": "It must become zero." },
+          { "id": "c", "text": "It cannot change with prevalence." },
+          { "id": "d", "text": "It becomes equal to sensitivity by definition." }
+        ],
+        "answer": "a"
+      },
+      {
+        "id": "br-transfer-2",
+        "type": "numeric",
+        "prompt": "In 100 items, 20 are defective. A detector flags 18 defective and 8 nondefective items. What fraction of flagged items are actually defective?",
+        "points": 1,
+        "answer": 0.6923,
+        "tolerance": 0.001
+      }
+    ],
+    "retention": [
+      {
+        "id": "br-retention-1",
+        "type": "single_choice",
+        "prompt": "A highly accurate detector is applied to an extremely rare event. Which information remains essential for interpreting an alert?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "The event's base rate" },
+          { "id": "b", "text": "The color of the alert" },
+          { "id": "c", "text": "Only the detector's name" },
+          { "id": "d", "text": "No additional information" }
+        ],
+        "answer": "a"
+      },
+      {
+        "id": "br-retention-2",
+        "type": "single_choice",
+        "prompt": "Why are natural frequencies useful in Bayes problems?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "They remove all uncertainty." },
+          { "id": "b", "text": "They make the relevant groups and denominator visible." },
+          { "id": "c", "text": "They guarantee a positive result is correct." },
+          { "id": "d", "text": "They replace the need for base rates." }
+        ],
+        "answer": "b"
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://caoshurong.github.io/didyoulearn/schemas/run.schema.json",
+  "title": "DidYouLearn run record",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version",
+    "run_id",
+    "study_id",
+    "participant_id",
+    "task_id",
+    "task_version",
+    "tutor",
+    "started_at",
+    "teaching_seconds",
+    "truth_status",
+    "critical_error_ids",
+    "evidence_tier",
+    "assessments",
+    "self_report"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "run_id": { "$ref": "#/$defs/id" },
+    "study_id": { "$ref": "#/$defs/id" },
+    "participant_id": { "$ref": "#/$defs/id" },
+    "task_id": { "$ref": "#/$defs/id" },
+    "task_version": { "type": "string" },
+    "tutor": {
+      "type": "object",
+      "required": ["id", "label", "product", "model", "mode"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "label": { "type": "string" },
+        "product": { "type": "string" },
+        "model": { "type": "string" },
+        "mode": { "type": "string" }
+      }
+    },
+    "started_at": { "type": "string", "format": "date-time" },
+    "teaching_seconds": { "type": "integer", "minimum": 1 },
+    "truth_status": { "enum": ["pass", "fail", "not-reviewed"] },
+    "critical_error_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "evidence_tier": {
+      "enum": [
+        "community-submitted",
+        "evidence-complete",
+        "coordinator-verified",
+        "provider-verified"
+      ]
+    },
+    "assessments": {
+      "type": "object",
+      "required": ["pretest", "posttest", "transfer"],
+      "properties": {
+        "pretest": { "type": "object" },
+        "posttest": { "type": "object" },
+        "transfer": { "type": "object" },
+        "retention": { "type": "object" }
+      }
+    },
+    "self_report": {
+      "type": "object",
+      "required": ["understanding_before", "understanding_after", "cognitive_effort"],
+      "properties": {
+        "understanding_before": { "type": "number", "minimum": 0, "maximum": 100 },
+        "understanding_after": { "type": "number", "minimum": 0, "maximum": 100 },
+        "cognitive_effort": { "type": "number", "minimum": 0, "maximum": 100 }
+      }
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]{2,79}$"
+    }
+  }
+}

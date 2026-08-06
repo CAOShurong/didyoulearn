@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "task_id": "machine-learning.overfitting",
+  "version": "1.0.0",
+  "title": "Overfitting and honest generalization estimates",
+  "domain": "machine-learning",
+  "level": "undergraduate",
+  "language": "en",
+  "review_status": "community-draft",
+  "estimated_teaching_minutes": 9,
+  "learning_objectives": [
+    "Explain why training performance can improve while unseen-data performance worsens.",
+    "Separate training, validation, and final test roles.",
+    "Recognize data leakage and repeated test-set tuning."
+  ],
+  "prerequisites": ["Supervised learning", "Training loss"],
+  "sources": [
+    {
+      "title": "Cross-validation: evaluating estimator performance",
+      "publisher": "scikit-learn",
+      "url": "https://scikit-learn.org/stable/modules/cross_validation.html"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "of-m1",
+      "description": "The model with the lowest training error must generalize best."
+    },
+    {
+      "id": "of-m2",
+      "description": "It is harmless to repeatedly tune choices against the final test set."
+    }
+  ],
+  "critical_errors": [
+    {
+      "id": "of-e1",
+      "description": "Claims that training-set performance is an unbiased estimate of unseen-data performance."
+    },
+    {
+      "id": "of-e2",
+      "description": "Recommends using final test results repeatedly for model selection without disclosing leakage."
+    }
+  ],
+  "teaching_brief": {
+    "goal": "Help the learner connect overfitting to reuse of finite data and distinguish dataset roles.",
+    "learner_profile": "A beginner who selects models by training accuracy.",
+    "instructions": [
+      "Use a concrete flexible-model example.",
+      "Explain training, validation, and final test data as different information boundaries.",
+      "Ask what changes when the test set is consulted repeatedly.",
+      "Include one remedy without implying that any remedy guarantees generalization."
+    ],
+    "prohibited_disclosures": [
+      "Do not reveal held-out item wording.",
+      "Do not claim cross-validation eliminates every source of bias."
+    ]
+  },
+  "forms": {
+    "pretest": [
+      {
+        "id": "of-pre-1",
+        "type": "single_choice",
+        "prompt": "A complex model reaches 100% training accuracy but 62% accuracy on new data. What is the likely problem?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "Overfitting to training-specific patterns" },
+          { "id": "b", "text": "The new data automatically became training data" },
+          { "id": "c", "text": "Training accuracy must be wrong because it is high" },
+          { "id": "d", "text": "Generalization is defined by training accuracy" }
+        ],
+        "answer": "a"
+      },
+      {
+        "id": "of-pre-2",
+        "type": "single_choice",
+        "prompt": "What is the proper role of a final test set?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "Tune every hyperparameter against it." },
+          { "id": "b", "text": "Provide a final estimate after model choices are fixed." },
+          { "id": "c", "text": "Train the model on it before evaluation." },
+          { "id": "d", "text": "Replace the training set." }
+        ],
+        "answer": "b"
+      }
+    ],
+    "posttest": [
+      {
+        "id": "of-post-1",
+        "type": "single_choice",
+        "prompt": "Why can repeated tuning against a test set make its reported performance optimistic?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "Model-selection decisions indirectly adapt to chance features of that test set." },
+          { "id": "b", "text": "The test labels become physically larger." },
+          { "id": "c", "text": "Optimizers cannot use validation data." },
+          { "id": "d", "text": "A test set has no sampling variability." }
+        ],
+        "answer": "a"
+      },
+      {
+        "id": "of-post-2",
+        "type": "single_choice",
+        "prompt": "Which split should normally guide hyperparameter choice while preserving a final holdout?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "Validation data or cross-validation within the development data" },
+          { "id": "b", "text": "The final test set after every training epoch" },
+          { "id": "c", "text": "Only the easiest training examples" },
+          { "id": "d", "text": "No data at all" }
+        ],
+        "answer": "a"
+      }
+    ],
+    "transfer": [
+      {
+        "id": "of-transfer-1",
+        "type": "single_choice",
+        "prompt": "A feature is calculated using information recorded after the prediction target occurred. What risk does this create?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "Target or temporal leakage that will not be available at real prediction time" },
+          { "id": "b", "text": "Guaranteed fairness" },
+          { "id": "c", "text": "A larger true sample" },
+          { "id": "d", "text": "Automatic causal identification" }
+        ],
+        "answer": "a"
+      },
+      {
+        "id": "of-transfer-2",
+        "type": "single_choice",
+        "prompt": "Five hundred model variants are tried and only the best validation score is reported. What should be considered?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "Selection over many variants can exploit validation noise; independent confirmation is valuable." },
+          { "id": "b", "text": "Trying more variants guarantees the selected score is unbiased." },
+          { "id": "c", "text": "Validation data becomes identical to the population." },
+          { "id": "d", "text": "Model selection cannot overfit." }
+        ],
+        "answer": "a"
+      }
+    ],
+    "retention": [
+      {
+        "id": "of-retention-1",
+        "type": "single_choice",
+        "prompt": "Overfitting is best detected by a gap between...",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "development performance and honest performance on unseen data" },
+          { "id": "b", "text": "two identical copies of the training score" },
+          { "id": "c", "text": "the model name and file name" },
+          { "id": "d", "text": "the number of labels and the color palette" }
+        ],
+        "answer": "a"
+      },
+      {
+        "id": "of-retention-2",
+        "type": "single_choice",
+        "prompt": "After all model and hyperparameter choices are fixed, which data should estimate final generalization?",
+        "points": 1,
+        "choices": [
+          { "id": "a", "text": "A held-out test set not used for those choices" },
+          { "id": "b", "text": "The training set alone" },
+          { "id": "c", "text": "The test set used repeatedly during tuning" },
+          { "id": "d", "text": "Only misclassified training points" }
+        ],
+        "answer": "a"
+      }
+    ]
+  }
+}

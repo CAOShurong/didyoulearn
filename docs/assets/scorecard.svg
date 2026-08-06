@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="820" viewBox="0 0 1600 820" role="img" aria-labelledby="title desc">
+  <title id="title">Fictional DidYouLearn tutor scorecards</title>
+  <desc id="desc">Three fictional tutors are compared on adjusted mastery, transfer, retention, truth pass rate, and illusion gap. The visualization is explicitly labeled fictional.</desc>
+  <rect width="1600" height="820" fill="#f3f0e8"/>
+  <text x="800" y="78" text-anchor="middle" fill="#a44a3f" font-family="ui-monospace,Consolas,monospace" font-size="18" font-weight="700" letter-spacing="5">FICTIONAL DEMONSTRATION · NOT COMMERCIAL MODEL RESULTS</text>
+  <text x="800" y="142" text-anchor="middle" fill="#18252c" font-family="Georgia,serif" font-size="50" font-weight="700">One rank cannot describe a teacher.</text>
+  <text x="800" y="181" text-anchor="middle" fill="#5e6a6e" font-family="Arial,sans-serif" font-size="22">Every card keeps learning outcomes and confidence calibration visible.</text>
+
+  <g transform="translate(90 235)">
+    <rect width="440" height="500" rx="6" fill="#fffdf8" stroke="#c9c1b3" stroke-width="2"/>
+    <text x="32" y="45" fill="#1e6867" font-family="ui-monospace,Consolas,monospace" font-size="16" font-weight="700" letter-spacing="3">#1 · EVIDENCE GATE PASSED</text>
+    <text x="32" y="91" fill="#18252c" font-family="Georgia,serif" font-size="36" font-weight="700">Tutor Atlas</text>
+    <text x="32" y="121" fill="#5e6a6e" font-family="Arial,sans-serif" font-size="17">Fictional · n=24 · 95% interval shown</text>
+    <g transform="translate(32 166)" font-family="Arial,sans-serif">
+      <text y="12" fill="#18252c" font-size="16">Adjusted mastery</text><rect x="160" width="198" height="14" rx="7" fill="#e5e0d5"/><rect x="160" width="166" height="14" rx="7" fill="#1e6867"/><text x="374" y="12" fill="#18252c" font-size="16" font-weight="700">84</text>
+      <text y="72" fill="#18252c" font-size="16">Transfer</text><rect x="160" y="60" width="198" height="14" rx="7" fill="#e5e0d5"/><rect x="160" y="60" width="154" height="14" rx="7" fill="#55728a"/><text x="374" y="72" fill="#18252c" font-size="16" font-weight="700">78</text>
+      <text y="132" fill="#18252c" font-size="16">Retention</text><rect x="160" y="120" width="198" height="14" rx="7" fill="#e5e0d5"/><rect x="160" y="120" width="139" height="14" rx="7" fill="#77715c"/><text x="374" y="132" fill="#18252c" font-size="16" font-weight="700">70</text>
+    </g>
+    <line x1="32" y1="342" x2="408" y2="342" stroke="#ded8cc"/>
+    <text x="32" y="386" fill="#5e6a6e" font-family="Arial,sans-serif" font-size="15">TRUTH PASS</text><text x="32" y="420" fill="#18252c" font-family="Georgia,serif" font-size="29" font-weight="700">100%</text>
+    <text x="242" y="386" fill="#5e6a6e" font-family="Arial,sans-serif" font-size="15">ILLUSION GAP</text><text x="242" y="420" fill="#18252c" font-family="Georgia,serif" font-size="29" font-weight="700">+3 pts</text>
+    <rect x="32" y="451" width="376" height="24" rx="12" fill="#dce9e5"/><text x="220" y="468" text-anchor="middle" fill="#1e6867" font-family="ui-monospace,Consolas,monospace" font-size="13" font-weight="700">CONFIDENCE TRACKS MASTERY</text>
+  </g>
+
+  <g transform="translate(580 235)">
+    <rect width="440" height="500" rx="6" fill="#fffdf8" stroke="#c9c1b3" stroke-width="2"/>
+    <text x="32" y="45" fill="#a44a3f" font-family="ui-monospace,Consolas,monospace" font-size="16" font-weight="700" letter-spacing="3">#2 · EVIDENCE GATE PASSED</text>
+    <text x="32" y="91" fill="#18252c" font-family="Georgia,serif" font-size="36" font-weight="700">Tutor Beacon</text>
+    <text x="32" y="121" fill="#5e6a6e" font-family="Arial,sans-serif" font-size="17">Fictional · n=24 · 95% interval shown</text>
+    <g transform="translate(32 166)" font-family="Arial,sans-serif">
+      <text y="12" fill="#18252c" font-size="16">Adjusted mastery</text><rect x="160" width="198" height="14" rx="7" fill="#e5e0d5"/><rect x="160" width="158" height="14" rx="7" fill="#a44a3f"/><text x="374" y="12" fill="#18252c" font-size="16" font-weight="700">80</text>
+      <text y="72" fill="#18252c" font-size="16">Transfer</text><rect x="160" y="60" width="198" height="14" rx="7" fill="#e5e0d5"/><rect x="160" y="60" width="162" height="14" rx="7" fill="#55728a"/><text x="374" y="72" fill="#18252c" font-size="16" font-weight="700">82</text>
+      <text y="132" fill="#18252c" font-size="16">Retention</text><rect x="160" y="120" width="198" height="14" rx="7" fill="#e5e0d5"/><rect x="160" y="120" width="143" height="14" rx="7" fill="#77715c"/><text x="374" y="132" fill="#18252c" font-size="16" font-weight="700">72</text>
+    </g>
+    <line x1="32" y1="342" x2="408" y2="342" stroke="#ded8cc"/>
+    <text x="32" y="386" fill="#5e6a6e" font-family="Arial,sans-serif" font-size="15">TRUTH PASS</text><text x="32" y="420" fill="#18252c" font-family="Georgia,serif" font-size="29" font-weight="700">100%</text>
+    <text x="242" y="386" fill="#5e6a6e" font-family="Arial,sans-serif" font-size="15">ILLUSION GAP</text><text x="242" y="420" fill="#a44a3f" font-family="Georgia,serif" font-size="29" font-weight="700">+12 pts</text>
+    <rect x="32" y="451" width="376" height="24" rx="12" fill="#f0dfd8"/><text x="220" y="468" text-anchor="middle" fill="#a44a3f" font-family="ui-monospace,Consolas,monospace" font-size="13" font-weight="700">CONFIDENCE EXCEEDS MASTERY</text>
+  </g>
+
+  <g transform="translate(1070 235)">
+    <rect width="440" height="500" rx="6" fill="#fffdf8" stroke="#c9c1b3" stroke-width="2"/>
+    <text x="32" y="45" fill="#a2762d" font-family="ui-monospace,Consolas,monospace" font-size="16" font-weight="700" letter-spacing="3">RANK WITHHELD</text>
+    <text x="32" y="91" fill="#18252c" font-family="Georgia,serif" font-size="36" font-weight="700">Tutor Cedar</text>
+    <text x="32" y="121" fill="#5e6a6e" font-family="Arial,sans-serif" font-size="17">Fictional · n=3 · below evidence floor</text>
+    <g transform="translate(32 166)" font-family="Arial,sans-serif">
+      <text y="12" fill="#18252c" font-size="16">Adjusted mastery</text><rect x="160" width="198" height="14" rx="7" fill="#e5e0d5"/><rect x="160" width="174" height="14" rx="7" fill="#a2762d"/><text x="374" y="12" fill="#18252c" font-size="16" font-weight="700">88</text>
+      <text y="72" fill="#18252c" font-size="16">Transfer</text><rect x="160" y="60" width="198" height="14" rx="7" fill="#e5e0d5"/><rect x="160" y="60" width="166" height="14" rx="7" fill="#55728a"/><text x="374" y="72" fill="#18252c" font-size="16" font-weight="700">84</text>
+      <text y="132" fill="#18252c" font-size="16">Retention</text><rect x="160" y="120" width="198" height="14" rx="7" fill="#e5e0d5"/><rect x="160" y="120" width="0" height="14" rx="7" fill="#77715c"/><text x="374" y="132" fill="#18252c" font-size="16" font-weight="700">—</text>
+    </g>
+    <line x1="32" y1="342" x2="408" y2="342" stroke="#ded8cc"/>
+    <text x="32" y="386" fill="#5e6a6e" font-family="Arial,sans-serif" font-size="15">TRUTH PASS</text><text x="32" y="420" fill="#18252c" font-family="Georgia,serif" font-size="29" font-weight="700">100%</text>
+    <text x="242" y="386" fill="#5e6a6e" font-family="Arial,sans-serif" font-size="15">ILLUSION GAP</text><text x="242" y="420" fill="#18252c" font-family="Georgia,serif" font-size="29" font-weight="700">+1 pt</text>
+    <rect x="32" y="451" width="376" height="24" rx="12" fill="#eee6d3"/><text x="220" y="468" text-anchor="middle" fill="#8a6827" font-family="ui-monospace,Consolas,monospace" font-size="13" font-weight="700">MORE EVIDENCE REQUIRED</text>
+  </g>
+</svg>
