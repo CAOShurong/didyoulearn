@@ -50,12 +50,16 @@ after the study's sample and truth thresholds are met.
 
 ## Start in sixty seconds
 
-The browser lab runs locally and never calls a model:
+The browser lab runs locally and never calls a model. Until the first PyPI trusted-publisher
+registration is completed, install the independently verified GitHub Release wheel:
 
 ```bash
-python -m pip install didyoulearn
+python -m pip install https://github.com/CAOShurong/didyoulearn/releases/download/v0.1.0/didyoulearn-0.1.0-py3-none-any.whl
 didyoulearn serve
 ```
+
+The shorter `python -m pip install didyoulearn` command will become available after the same
+artifact is accepted by PyPI.
 
 Or open the [hosted static lab](https://caoshurong.github.io/didyoulearn/#lab). The hosted page
 contains the same static HTML, CSS, and JavaScript. Study data remains in the page until you
