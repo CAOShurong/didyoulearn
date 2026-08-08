@@ -11,7 +11,7 @@
 
   [![CI](https://github.com/CAOShurong/didyoulearn/actions/workflows/ci.yml/badge.svg)](https://github.com/CAOShurong/didyoulearn/actions/workflows/ci.yml)
   [![Pages](https://github.com/CAOShurong/didyoulearn/actions/workflows/pages.yml/badge.svg)](https://caoshurong.github.io/didyoulearn/)
-  [![PyPI](https://img.shields.io/pypi/v/didyoulearn?color=1e6867)](https://pypi.org/project/didyoulearn/)
+  [![GitHub Release](https://img.shields.io/github/v/release/CAOShurong/didyoulearn?color=1e6867&label=release)](https://github.com/CAOShurong/didyoulearn/releases/tag/v0.1.0)
   [![Python](https://img.shields.io/badge/Python-3.11%2B-173b4c)](https://www.python.org/)
   [![Runtime dependencies](https://img.shields.io/badge/runtime_dependencies-0-4e6b55)](#privacy-and-trust-boundary)
   [![License: MIT](https://img.shields.io/badge/license-MIT-a44a3f)](LICENSE)
