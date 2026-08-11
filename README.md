@@ -11,7 +11,7 @@
 
   [![CI](https://github.com/CAOShurong/didyoulearn/actions/workflows/ci.yml/badge.svg)](https://github.com/CAOShurong/didyoulearn/actions/workflows/ci.yml)
   [![Pages](https://github.com/CAOShurong/didyoulearn/actions/workflows/pages.yml/badge.svg)](https://caoshurong.github.io/didyoulearn/)
-  [![GitHub Release](https://img.shields.io/github/v/release/CAOShurong/didyoulearn?color=1e6867&label=release)](https://github.com/CAOShurong/didyoulearn/releases/tag/v0.1.0)
+  [![GitHub Release](https://img.shields.io/github/v/release/CAOShurong/didyoulearn?color=1e6867&label=release)](https://github.com/CAOShurong/didyoulearn/releases/latest)
   [![Python](https://img.shields.io/badge/Python-3.11%2B-173b4c)](https://www.python.org/)
   [![Runtime dependencies](https://img.shields.io/badge/runtime_dependencies-0-4e6b55)](#privacy-and-trust-boundary)
   [![License: MIT](https://img.shields.io/badge/license-MIT-a44a3f)](LICENSE)
@@ -54,12 +54,16 @@ The browser lab runs locally and never calls a model. Until the first PyPI trust
 registration is completed, install the independently verified GitHub Release wheel:
 
 ```bash
-python -m pip install https://github.com/CAOShurong/didyoulearn/releases/download/v0.1.0/didyoulearn-0.1.0-py3-none-any.whl
+python -m pip install https://github.com/CAOShurong/didyoulearn/releases/download/v0.1.1/didyoulearn-0.1.1-py3-none-any.whl
 didyoulearn serve
 ```
 
 The shorter `python -m pip install didyoulearn` command will become available after the same
 artifact is accepted by PyPI.
+
+Each GitHub Release also includes `SHA256SUMS`, and GitHub publishes build
+provenance for the wheel and source distribution. Maintainer release and PyPI
+setup instructions are documented in [the publishing runbook](docs/publishing.md).
 
 Or open the [hosted static lab](https://caoshurong.github.io/didyoulearn/#lab). The hosted page
 contains the same static HTML, CSS, and JavaScript. Study data remains in the page until you
