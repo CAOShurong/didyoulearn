@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "didyoulearn"
-version = "0.1.0"
+version = "0.1.1"
 description = "Outcome-based evaluation for AI tutors: did the learner actually learn?"
 readme = "README.md"
 requires-python = ">=3.11"
